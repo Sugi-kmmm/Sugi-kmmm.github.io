@@ -3,34 +3,38 @@
 body {
     margin: 0;
     padding: 0;
-    background: url("/image/bg-4.png") left top repeat-x;
+    background: #2d2d2d;
     font-family: 'Arial', sans-serif;
-    color: #333;
+    color: #e0e0e0;
 }
 
 header {
-    background-color: #ae3d4b;
+    background: #ae3d4b; /* シンプルな単色背景 */
     text-align: center;
-    padding: 20px 0;
+    padding: 8px 0;
+    color: #fff;
+    border-bottom: 2px solid #6a1917; /* 落ち着いたアクセント */
 }
 
-h1 {
-    font-size: 36px;
-    color: #f3e6d2;
-    margin: 0;
+header h1 {
+    font-size: 40px; /* 少し控えめなサイズ */
+    color: #ffffff;
+    margin: 6px 0;
+    font-weight: bold; /* 太字を控えめに */
 }
 
-.description {
-    font-size: 18px;
+header .description {
+    font-size: 23px; /* 小さめのフォントサイズ */
     color: #f3f2eb;
-    margin: 5px 0;
+    margin: 8px 0;
+    font-style: normal; /* 柔らかい印象を与える */
 }
 
 .global-navi {
-    background: #fff;
-    border-bottom: 2px solid #ae3d4b;
+    background: #6a1917; /* ヘッダーと調和する落ち着いた色 */
     padding: 10px 0;
     text-align: center;
+    border-top: 1px solid #ae3d4b; /* シンプルな区切り線 */
 }
 
 .naviyoko {
@@ -39,7 +43,7 @@ h1 {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 5px; /* 少し広めの間隔で余裕を持たせる */
 }
 
 .naviyoko li {
@@ -47,20 +51,14 @@ h1 {
 }
 
 .naviyoko li a img {
-    width: 106px;
-    height: 46px;
+    width: 130px; /* 少し小さめに調整 */
+    height: auto;
+    filter: brightness(0.85); /* 落ち着いたトーン */
+    transition: filter 0.3s;
 }
 
-#bgc {
-    background-image: url("/image/sample-bg.jpg");
-    background-size: cover;
-    height: 160px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
+.naviyoko li a img:hover {
+    filter: brightness(1); /* 過剰な変化を抑える */
 }
 
 #content {
@@ -68,17 +66,29 @@ h1 {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background: #fff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background: #3a3a3a;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
+    color: #e0e0e0;
 }
 
 footer {
-    background-color: #f0f3f4;
+    background-color: #222;
     text-align: center;
     padding: 20px 0;
     font-size: 14px;
-    color: #363636;
+    color: #bdbdbd;
+}
+
+a {
+    color: #fd9191; /* モダンで落ち着いた色 */
+    text-decoration: none; /* 下線を削除 */
+    transition: color 0.3s ease; /* ホバー時のアニメーション */
+}
+
+a:hover {
+    color: #ae3d4b; /* ホバー時にアクセントカラーを適用 */
+    text-decoration: underline; /* ホバー時に下線を追加（オプション） */
 }
 
 /* スマホ対応 */
