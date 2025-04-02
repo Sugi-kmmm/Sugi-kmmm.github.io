@@ -72,6 +72,13 @@ header .description {
     color: #e0e0e0;
 }
 
+.post-date {
+    font-size: 0.8em; /* 文字を小さくする */
+    color: #888787; /* グレーにする */
+    display: block; /* ブロック表示にして独立させる */
+}
+
+
 footer {
     background-color: #222;
     text-align: center;
