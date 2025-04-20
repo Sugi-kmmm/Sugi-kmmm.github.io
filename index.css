@@ -118,6 +118,66 @@ a:hover {
     /* ホバー時に下線を追加（オプション） */
 }
 
+/* トップへ戻るボタンのスタイル */
+.back-to-top-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #ae3d4b;
+    /* ボタンの背景色 */
+    color: #fff;
+    /* テキストの色 */
+    text-decoration: none;
+    /* 下線を消す */
+    border-radius: 5px;
+    /* 角を丸くする */
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    /* ホバー時のアニメーション */
+}
+
+.back-to-top-button:hover {
+    background-color: #fd9191;
+    /* ホバー時の背景色 */
+    color: #000;
+    /* ホバー時の文字色を黒に変更 */
+    text-decoration: none;
+    /* 下線を消す */
+}
+
+/* 画像とキャプションのコンテナ */
+.image-caption-container {
+    text-align: center;
+    /* 中央揃え */
+    margin: 20px 0;
+    /* 上下の余白 */
+}
+
+/* 画像のスタイル */
+.captioned-image {
+    max-width: 100%;
+    /* 画像をコンテナ内に収める */
+    height: auto;
+    /* アスペクト比を維持 */
+    border-radius: 8px;
+    /* 角を丸くする（オプション） */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* 影を追加 */
+}
+
+/* キャプションのスタイル */
+.image-caption {
+    margin-top: 10px;
+    /* 画像との間隔 */
+    font-size: 14px;
+    /* キャプションの文字サイズ */
+    color: #888;
+    /* キャプションの文字色 */
+    font-style: italic;
+    /* イタリック体（オプション） */
+}
+
 /* スマホ対応 */
 @media screen and (max-width: 480px) {
     .naviyoko {
