@@ -9,32 +9,40 @@ body {
 }
 
 header {
-    background: #ae3d4b; /* シンプルな単色背景 */
+    background: #ae3d4b;
+    /* シンプルな単色背景 */
     text-align: center;
     padding: 8px 0;
     color: #fff;
-    border-bottom: 2px solid #6a1917; /* 落ち着いたアクセント */
+    border-bottom: 2px solid #6a1917;
+    /* 落ち着いたアクセント */
 }
 
 header h1 {
-    font-size: 40px; /* 少し控えめなサイズ */
+    font-size: 40px;
+    /* 少し控えめなサイズ */
     color: #ffffff;
     margin: 6px 0;
-    font-weight: bold; /* 太字を控えめに */
+    font-weight: bold;
+    /* 太字を控えめに */
 }
 
 header .description {
-    font-size: 23px; /* 小さめのフォントサイズ */
+    font-size: 23px;
+    /* 小さめのフォントサイズ */
     color: #f3f2eb;
     margin: 8px 0;
-    font-style: normal; /* 柔らかい印象を与える */
+    font-style: normal;
+    /* 柔らかい印象を与える */
 }
 
 .global-navi {
-    background: #6a1917; /* ヘッダーと調和する落ち着いた色 */
+    background: #6a1917;
+    /* ヘッダーと調和する落ち着いた色 */
     padding: 10px 0;
     text-align: center;
-    border-top: 1px solid #ae3d4b; /* シンプルな区切り線 */
+    border-top: 1px solid #ae3d4b;
+    /* シンプルな区切り線 */
 }
 
 .naviyoko {
@@ -43,7 +51,8 @@ header .description {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 5px; /* 少し広めの間隔で余裕を持たせる */
+    gap: 5px;
+    /* 少し広めの間隔で余裕を持たせる */
 }
 
 .naviyoko li {
@@ -51,14 +60,17 @@ header .description {
 }
 
 .naviyoko li a img {
-    width: 130px; /* 少し小さめに調整 */
+    width: 130px;
+    /* 少し小さめに調整 */
     height: auto;
-    filter: brightness(0.85); /* 落ち着いたトーン */
+    filter: brightness(0.85);
+    /* 落ち着いたトーン */
     transition: filter 0.3s;
 }
 
 .naviyoko li a img:hover {
-    filter: brightness(1); /* 過剰な変化を抑える */
+    filter: brightness(1);
+    /* 過剰な変化を抑える */
 }
 
 #content {
@@ -73,9 +85,12 @@ header .description {
 }
 
 .post-date {
-    font-size: 0.8em; /* 文字を小さくする */
-    color: #888787; /* グレーにする */
-    display: block; /* ブロック表示にして独立させる */
+    font-size: 0.8em;
+    /* 文字を小さくする */
+    color: #888787;
+    /* グレーにする */
+    display: block;
+    /* ブロック表示にして独立させる */
 }
 
 
@@ -88,14 +103,19 @@ footer {
 }
 
 a {
-    color: #fd9191; /* モダンで落ち着いた色 */
-    text-decoration: none; /* 下線を削除 */
-    transition: color 0.3s ease; /* ホバー時のアニメーション */
+    color: #fd9191;
+    /* モダンで落ち着いた色 */
+    text-decoration: none;
+    /* 下線を削除 */
+    transition: color 0.3s ease;
+    /* ホバー時のアニメーション */
 }
 
 a:hover {
-    color: #ae3d4b; /* ホバー時にアクセントカラーを適用 */
-    text-decoration: underline; /* ホバー時に下線を追加（オプション） */
+    color: #ae3d4b;
+    /* ホバー時にアクセントカラーを適用 */
+    text-decoration: underline;
+    /* ホバー時に下線を追加（オプション） */
 }
 
 /* スマホ対応 */
@@ -104,7 +124,7 @@ a:hover {
         flex-wrap: wrap;
         justify-content: space-around;
     }
-    
+
     .sp {
         display: none;
     }
