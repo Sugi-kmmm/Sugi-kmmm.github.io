@@ -189,3 +189,35 @@ a:hover {
         display: none;
     }
 }
+
+.github-link-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #24292f;
+    color: #fff;
+    padding: 0.8em 2em; /* ボタンを少し大きく */
+    border-radius: 6px;  /* 角丸も少し大きく */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.15em;   /* フォントサイズもアップ */
+    transition: background 0.2s;
+    margin-top: 0.5em;
+}
+
+.github-link-button:hover {
+    background-color: #ae3d4b; /* サイトのアクセントカラーに */
+    color: #fff;
+}
+
+.github-icon {
+    height: 1.6em; /* アイコンも少し大きく */
+    margin-right: 0.7em;
+    vertical-align: middle;
+}
+
+.center-github-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
