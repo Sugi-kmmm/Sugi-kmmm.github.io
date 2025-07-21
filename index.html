@@ -25,32 +25,22 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXD2PSG4" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <header>
-        <div id="header-container">
-            <h1>杉原 怜 / Rei Sugihara</h1>
-            <p class="description">Robot Creator</p>
-        </div>
-    </header>
 
-    <nav class="global-navi">
-        <ul class="naviyoko">
-            <li><a href="index.html"><img src="/figures/top.svg" alt="トップ"></a></li>
-            <li><a href="profile.html"><img src="/figures/profile.svg" alt="経歴"></a></li>
-            <li><a href="research.html"><img src="/figures/research.svg" alt="研究内容"></a></li>
-            <li><a href="collection.html"><img src="/figures/collection.svg" alt="作品一覧"></a></li>
-            <li><a href="contact.html"><img src="/figures/contact.svg" alt="コンタクト"></a></li>
-            <li><a href="links.html"><img src="/figures/links.svg" alt="リンク"></a></li>
-        </ul>
-    </nav>
+    <div id="header-include"></div>
+    <script>
+        fetch('/js_includes/header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header-include').innerHTML = data);
+    </script>
 
     <main id="content">
         <div class="inner">
-            <h2>プロフィール / Profile</h2>
+            <h2>プロフィール</h2>
             <p>学士（工学）<br> 東京工業大学（現 東京科学大学）<br>工学院機械系機械コース 修士2年 <br>末包研究室</p>
-            <p>新たな「生き物」としてのロボットの創造を目指して，機械工学などを研究しています．</p>
+            <p>誰かを笑顔にするロボットを作るために，機械工学などを研究しています．</p>
             <p>また，中学生に対するロボット教育をはじめ，NHK番組「魔改造の夜」への出場やMaker Faire Tokyoなどの展示会への参加など，様々な「ものつくりの楽しさを布教する活動」にも取り組んでいます．</p>
 
-            <h2>トピックス / Topics</h2>
+            <h2>トピックス</h2>
             <ul class="news-list">
                 <li><a href="news/20250605.html">2025.06.05: 日本機械学会 若手優秀講演フェロー賞を受賞しました</a></li>
                 <li><a href="news/20250326.html">2025.03.26: 機械コース修士中間発表優秀賞を受賞しました</a></li>
