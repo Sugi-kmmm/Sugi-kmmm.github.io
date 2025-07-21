@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /figures/github-mark.svg
+Disallow: /figures/github-mark-white.svg

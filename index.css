@@ -73,6 +73,11 @@ header .description {
     /* 過剰な変化を抑える */
 }
 
+.naviyoko li a:hover,
+.naviyoko li a:active {
+    text-decoration: none;
+}
+
 #content {
     width: 80%;
     max-width: 800px;
@@ -195,22 +200,27 @@ a:hover {
     align-items: center;
     background-color: #24292f;
     color: #fff;
-    padding: 0.8em 2em; /* ボタンを少し大きく */
-    border-radius: 6px;  /* 角丸も少し大きく */
+    padding: 0.8em 2em;
+    /* ボタンを少し大きく */
+    border-radius: 6px;
+    /* 角丸も少し大きく */
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.15em;   /* フォントサイズもアップ */
+    font-size: 1.15em;
+    /* フォントサイズもアップ */
     transition: background 0.2s;
     margin-top: 0.5em;
 }
 
 .github-link-button:hover {
-    background-color: #ae3d4b; /* サイトのアクセントカラーに */
+    background-color: #ae3d4b;
+    /* サイトのアクセントカラーに */
     color: #fff;
 }
 
 .github-icon {
-    height: 1.6em; /* アイコンも少し大きく */
+    height: 1.6em;
+    /* アイコンも少し大きく */
     margin-right: 0.7em;
     vertical-align: middle;
 }
@@ -220,4 +230,32 @@ a:hover {
     justify-content: center;
     align-items: center;
     margin: 20px 0;
+}
+
+.navi-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 38px;
+    line-height: 38px;
+    /* 追加：高さと同じにして中央揃えを補強 */
+    background: #6a1917;
+    border: 3px solid #ae3d4b;
+    border-radius: 8px;
+    /* 角丸を小さく */
+    box-sizing: border-box;
+    transition: filter 0.3s;
+    vertical-align: middle;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    user-select: none;
+    padding: 0;
+    /* 念のため余計なpaddingを除去 */
+}
+
+.navi-icon:hover {
+    filter: brightness(1.15);
 }

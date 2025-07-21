@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Sugi_kmmm, Robot Creator</title>
     <meta name="keywords" content="杉原怜, Rei Sugihara, Sugi_kmmm, ロボット, Robot Creator">
-    <meta name="description" content="トップページ">
+    <meta name="description" content="学士（工学）を取得しました">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="/index.css">
     <!-- Google Tag Manager -->
@@ -25,23 +25,12 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXD2PSG4" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <header>
-        <div id="header-container">
-            <h1>杉原 怜 / Rei Sugihara</h1>
-            <p class="description">Robot Creator</p>
-        </div>
-    </header>
-
-    <nav class="global-navi">
-        <ul class="naviyoko">
-            <li><a href="/index.html"><img src="/figures/top.svg" alt="トップ"></a></li>
-            <li><a href="/profile.html"><img src="/figures/profile.svg" alt="経歴"></a></li>
-            <li><a href="/research.html"><img src="/figures/research.svg" alt="研究内容"></a></li>
-            <li><a href="/collection.html"><img src="/figures/collection.svg" alt="作品一覧"></a></li>
-            <li><a href="/contact.html"><img src="/figures/contact.svg" alt="コンタクト"></a></li>
-            <li><a href="/links.html"><img src="/figures/links.svg" alt="リンク"></a></li>
-        </ul>
-    </nav>
+    <div id="header-include"></div>
+    <script>
+        fetch('/js_includes/header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header-include').innerHTML = data);
+    </script>
 
     <main id="content">
         <div class="inner">
