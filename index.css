@@ -259,3 +259,9 @@ a:hover {
 .navi-icon:hover {
     filter: brightness(1.15);
 }
+
+.inner iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
