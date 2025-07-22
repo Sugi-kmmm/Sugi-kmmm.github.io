@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* Body */
 body {
     margin: 0;
     padding: 0;
@@ -18,6 +19,7 @@ header {
     /* 落ち着いたアクセント */
 }
 
+/* ヘッダーのタイトル */
 header h1 {
     font-size: 40px;
     /* 少し控えめなサイズ */
@@ -36,6 +38,7 @@ header .description {
     /* 柔らかい印象を与える */
 }
 
+/* グローバルナビゲーション */
 .global-navi {
     background: #6a1917;
     /* ヘッダーと調和する落ち着いた色 */
@@ -55,29 +58,35 @@ header .description {
     /* 少し広めの間隔で余裕を持たせる */
 }
 
-.naviyoko li {
-    display: inline-block;
-}
-
-.naviyoko li a img {
+.navi-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 130px;
-    /* 少し小さめに調整 */
-    height: auto;
-    filter: brightness(0.85);
-    /* 落ち着いたトーン */
+    height: 38px;
+    line-height: 38px;
+    /* 追加：高さと同じにして中央揃えを補強 */
+    background: #6a1917;
+    border: 3px solid #ae3d4b;
+    border-radius: 8px;
+    /* 角丸を小さく */
+    box-sizing: border-box;
     transition: filter 0.3s;
+    vertical-align: middle;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    user-select: none;
+    padding: 0;
+    /* 念のため余計なpaddingを除去 */
 }
 
-.naviyoko li a img:hover {
-    filter: brightness(1);
-    /* 過剰な変化を抑える */
+.navi-icon:hover {
+    filter: brightness(1.15);
 }
 
-.naviyoko li a:hover,
-.naviyoko li a:active {
-    text-decoration: none;
-}
-
+/* 内容 */
 #content {
     width: 80%;
     max-width: 800px;
@@ -107,6 +116,7 @@ footer {
     color: #bdbdbd;
 }
 
+/* リンクのスタイル */
 a {
     color: #fd9191;
     /* モダンで落ち着いた色 */
@@ -183,18 +193,7 @@ a:hover {
     /* イタリック体（オプション） */
 }
 
-/* スマホ対応 */
-@media screen and (max-width: 480px) {
-    .naviyoko {
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .sp {
-        display: none;
-    }
-}
-
+/* Githubへのリンク */
 .github-link-button {
     display: inline-flex;
     align-items: center;
@@ -232,36 +231,21 @@ a:hover {
     margin: 20px 0;
 }
 
-.navi-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 130px;
-    height: 38px;
-    line-height: 38px;
-    /* 追加：高さと同じにして中央揃えを補強 */
-    background: #6a1917;
-    border: 3px solid #ae3d4b;
-    border-radius: 8px;
-    /* 角丸を小さく */
-    box-sizing: border-box;
-    transition: filter 0.3s;
-    vertical-align: middle;
-    font-size: 1.1em;
-    color: #fff;
-    font-weight: bold;
-    letter-spacing: 0.05em;
-    user-select: none;
-    padding: 0;
-    /* 念のため余計なpaddingを除去 */
-}
-
-.navi-icon:hover {
-    filter: brightness(1.15);
-}
-
+/* iframeのスタイル */
 .inner iframe {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* スマホ対応 */
+@media screen and (max-width: 800px) {
+    .naviyoko {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .sp {
+        display: none;
+    }
 }

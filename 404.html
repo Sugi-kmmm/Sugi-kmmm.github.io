@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sugi_kmmm, Robot Creator</title>
+    <meta name="keywords" content="杉原怜, Rei Sugihara, Sugi_kmmm, ロボット, Robot Creator">
+    <meta name="description" content="404 Not Found">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+    <div id="header-include"></div>
+    <script>
+        fetch('/js_includes/header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header-include').innerHTML = data);
+    </script>
+
+    <main id="content">
+        <div class="inner">
+            <div class="image-caption-container">
+                <img src="/figures/404 NotFound.png" class="captioned-image">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="footer-inner">©2025 Sugi_kmmm</div>
+    </footer>
+</body>
+
+</html>
