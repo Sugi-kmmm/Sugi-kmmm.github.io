@@ -38,6 +38,53 @@ header .description {
     /* 柔らかい印象を与える */
 }
 
+/* 内容 */
+#content {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #3a3a3a;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    color: #e0e0e0;
+}
+
+.post-date {
+    font-size: 0.8em;
+    /* 文字を小さくする */
+    color: #888787;
+    /* グレーにする */
+    display: block;
+    /* ブロック表示にして独立させる */
+}
+
+
+footer {
+    background-color: #222;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #bdbdbd;
+}
+
+/* リンクのスタイル */
+a {
+    color: #fd9191;
+    /* モダンで落ち着いた色 */
+    text-decoration: none;
+    /* 下線を削除 */
+    transition: color 0.3s ease;
+    /* ホバー時のアニメーション */
+}
+
+a:hover {
+    color: #ae3d4b;
+    /* ホバー時にアクセントカラーを適用 */
+    text-decoration: underline;
+    /* ホバー時に下線を追加（オプション） */
+}
+
 /* グローバルナビゲーション */
 .global-navi {
     background: #6a1917;
@@ -84,53 +131,9 @@ header .description {
 
 .navi-icon:hover {
     filter: brightness(1.15);
-}
-
-/* 内容 */
-#content {
-    width: 80%;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #3a3a3a;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    color: #e0e0e0;
-}
-
-.post-date {
-    font-size: 0.8em;
-    /* 文字を小さくする */
-    color: #888787;
-    /* グレーにする */
-    display: block;
-    /* ブロック表示にして独立させる */
-}
-
-
-footer {
-    background-color: #222;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 14px;
-    color: #bdbdbd;
-}
-
-/* リンクのスタイル */
-a {
-    color: #fd9191;
-    /* モダンで落ち着いた色 */
-    text-decoration: none;
-    /* 下線を削除 */
-    transition: color 0.3s ease;
-    /* ホバー時のアニメーション */
-}
-
-a:hover {
-    color: #ae3d4b;
-    /* ホバー時にアクセントカラーを適用 */
-    text-decoration: underline;
-    /* ホバー時に下線を追加（オプション） */
+    color: #fff;
+    text-decoration: none !important;
+    /* 下線を確実に非表示にする */
 }
 
 /* トップへ戻るボタンのスタイル */
@@ -215,6 +218,8 @@ a:hover {
     background-color: #ae3d4b;
     /* サイトのアクセントカラーに */
     color: #fff;
+    text-decoration: none;
+    /* 下線を消す */
 }
 
 .github-icon {
