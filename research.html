@@ -41,9 +41,12 @@
         </div>
     </main>
 
-    <footer>
-        <div id="footer-inner">©2025 Sugi_kmmm</div>
-    </footer>
+    <div id="footer-include"></div>
+    <script>
+        fetch('/js_includes/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer-include').innerHTML = data);
+    </script>
 </body>
 
 </html>
