@@ -195,7 +195,7 @@ a:hover {
     /* イタリック体（オプション） */
 }
 
-/* 表のスタイル */
+/* 論文用，表のスタイル */
 .publication-table {
     width: 100%;
     border-collapse: collapse;
@@ -283,6 +283,28 @@ a:hover {
     justify-content: center;
     align-items: center;
     margin: 20px 0;
+}
+
+/* 論文リンクボタン */
+.paper-link-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #ae3d4b;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.paper-link-button:hover {
+    background-color: #fd9191;
+    color: #000;
+    text-decoration: none;
 }
 
 /* iframeのスタイル */
