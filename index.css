@@ -314,8 +314,125 @@ a:hover {
     margin-right: auto;
 }
 
+/* 研究業績（タブ形式） */
+.publication-tabs {
+    margin-top: 20px;
+}
+
+.pub-tablist {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    border-bottom: 3px solid #ae3d4b;
+}
+
+.pub-tablist button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 18px;
+    background: #2d2d2d;
+    color: #bdbdbd;
+    border: 1px solid #555;
+    border-bottom: none;
+    border-radius: 6px 6px 0 0;
+    font-family: inherit;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.pub-tablist button:hover {
+    background: #444;
+    color: #fff;
+}
+
+.pub-tablist button[aria-selected="true"] {
+    background: #ae3d4b;
+    border-color: #ae3d4b;
+    color: #fff;
+}
+
+.pub-count {
+    font-size: 0.75em;
+    font-weight: normal;
+    padding: 1px 7px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.pub-panel {
+    background: #333;
+    padding: 10px 20px 20px;
+    border-radius: 0 0 8px 8px;
+    min-height: 200px;
+}
+
+.pub-category {
+    font-size: 1.05em;
+    color: #fff;
+    margin: 20px 0 8px;
+    padding-left: 10px;
+    border-left: 4px solid #ae3d4b;
+}
+
+.publication-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.publication-list li {
+    padding: 10px 4px;
+    border-bottom: 1px solid #4a4a4a;
+    line-height: 1.6;
+}
+
+.publication-list li a {
+    font-weight: bold;
+}
+
+.pub-meta {
+    display: block;
+    font-size: 0.85em;
+    color: #aaa;
+}
+
+.pub-year {
+    display: inline-block;
+    margin-right: 8px;
+    padding: 0 6px;
+    font-size: 0.8em;
+    color: #fff;
+    background: #6a1917;
+    border-radius: 4px;
+}
+
+.pub-tag {
+    display: inline-block;
+    margin-right: 8px;
+    padding: 0 6px;
+    font-size: 0.8em;
+    color: #ddd;
+    border: 1px solid #777;
+    border-radius: 4px;
+}
+
+.pub-empty {
+    color: #888;
+}
+
 /* スマホ対応 */
 @media screen and (max-width: 800px) {
+    .pub-tablist button {
+        padding: 6px 12px;
+    }
+
+    .pub-panel {
+        padding: 8px 12px 16px;
+    }
+
     .naviyoko {
         flex-wrap: wrap;
         justify-content: space-around;

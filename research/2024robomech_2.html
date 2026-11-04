@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--
+    研究業績の個別ページ用テンプレート．
+    このファイルをコピーして（例: research/2026_transjsme.html）中身を書き換えるだけで，
+    research.html の一覧に自動で表示されます（「出版日」の年でタブ分け，「種別」でグループ分け）．
+-->
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sugi_kmmm, Robot Creator</title>
+    <meta name="keywords" content="杉原怜, Rei Sugihara, Sugi_kmmm, ロボット, Robot Creator">
+    <meta name="description" content="研究業績：（タイトル）">
+    <meta name="viewport" content="width=device-width">
+    <!-- テンプレート自体を検索結果に出さないための指定．コピー後は削除してください -->
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="/index.css">
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NXD2PSG4');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXD2PSG4" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="header-include"></div>
+    <script>
+        fetch('/js_includes/header.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('header-include').innerHTML = data);
+    </script>
+
+    <main id="content">
+        <div class="inner">
+            <h2>高強度化学繊維によるワイヤ駆動のための基礎的検討 ―15報：導電性ロープによる張力計測の原理検証―</h2>
+            <table class="publication-table">
+                <tr>
+                    <th>タイトル</th>
+                    <td>高強度化学繊維によるワイヤ駆動のための基礎的検討 ―15報：導電性ロープによる張力計測の原理検証―</td>
+                </tr>
+                <tr>
+                    <!-- 原著論文 / 国際会議発表 / 国内会議発表 / 解説・総説 / 受賞 / その他 など -->
+                    <th>種別</th>
+                    <td>国内会議発表（ポスター）</td>
+                </tr>
+                <tr>
+                    <th>査読</th>
+                    <td>査読なし</td>
+                </tr>
+                <tr>
+                    <th>著者</th>
+                    <td>定近 晋也，杉原 怜，難波江 裕之，遠藤 玄</td>
+                </tr>
+                <tr>
+                    <th>言語</th>
+                    <td>日本語</td>
+                </tr>
+                <tr>
+                    <th>掲載誌</th>
+                    <td>日本機械学会ロボティクス・メカトロニクス講演会2024</td>
+                </tr>
+                <tr>
+                    <th>巻，号，ページ</th>
+                    <td>1P1-N06</td>
+                </tr>
+                <tr>
+                    <th>出版日</th>
+                    <td>2024年5月30日</td>
+                </tr>
+                <tr>
+                    <th>出版社</th>
+                    <td>一般社団法人 日本機械学会</td>
+                </tr>
+                <tr>
+                    <th>受賞</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>DOI</th>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>抄録</th>
+                    <td>Coupled tendon-driven mechanism can make the manipulator lightweight and articulated. However, the complexity of the mechanism is an issue in the tension measurement required for the control. This study aims to develop a smart tendon-driven robot that can measure tension using a driving rope. We developed a 2DOF manipulator using an electrically conductive rope as the driving rope, which shows a change in resistance depending on the tension. We verified through experiments that it is possible to estimate the tension when an external force is applied, and to control the robot to realize an avoidance posture in response to the force.</td>
+                </tr>
+            </table>
+
+            <p><a href="/research.html" class="back-to-top-button">研究業績一覧へ戻る</a></p>
+        </div>
+    </main>
+
+    <div id="footer-include"></div>
+    <script>
+        fetch('/js_includes/footer.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('footer-include').innerHTML = data);
+    </script>
+</body>
+
+</html>
