@@ -123,16 +123,16 @@
                 const year = m ? m[1] : '年不明';
                 const vol = row['巻，号，ページ'] || row['巻,号,ページ'] || '';
                 const venue = row['掲載誌'] || row['会議名'] || row['発表会'] || row['表彰機関'] || '';
-                // 「査読」行があれば，種別と組み合わせてグループ名にする
-                //   例: 種別「国内会議発表（口頭）」＋ 査読「査読なし」→「国内会議発表（査読なし）」，ラベル「口頭」
+                // 種別の（）内はラベルとして表示し，グループは（）の前の部分でまとめる
+                // 「査読」行があれば，グループ名に付け加える
+                //   例: 種別「国内会議発表（口頭）」＋ 査読「査読なし」→ グループ「国内会議発表（査読なし）」，ラベル「口頭」
+                //       種別「学位論文（修士）」→ グループ「学位論文」，ラベル「修士」
                 const rawCategory = row['種別'] || 'その他';
                 const review = row['査読'] || '';
-                let category = rawCategory, tag = '';
-                if (/^査読(あり|なし)$/.test(review)) {
-                    const sub = rawCategory.match(/^(.*?)（(.+)）$/);
-                    category = (sub ? sub[1] : rawCategory) + '（' + review + '）';
-                    tag = sub ? sub[2] : '';
-                }
+                const sub = rawCategory.match(/^(.*?)（(.+)）$/);
+                let category = sub ? sub[1] : rawCategory;
+                const tag = sub ? sub[2] : '';
+                if (/^査読(あり|なし)$/.test(review)) category += '（' + review + '）';
                 return {
                     url,
                     title: row['タイトル'] || doc.title || url,
