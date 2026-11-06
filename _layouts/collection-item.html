@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<!-- 作品1件（collection/<作品名>/<作品名>.md）のレイアウト -->
+<p class="post-date">{{ page["日付"] | date: "%Y.%m.%d" }}</p>
+<h2>{{ page["タイトル"] | escape }}</h2>
+<div class="article-body">
+{{ content }}
+</div>
+<script src="/js_includes/article.js"></script>
+<p><a href="/collection.html" class="back-to-top-button">作品一覧へ戻る</a></p>

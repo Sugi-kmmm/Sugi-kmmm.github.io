@@ -1,2 +1,30 @@
+# GitHub Pages (Jekyll) の設定
 plugins:
   - jekyll-sitemap
+  # 旧 URL（例 /research/2024robomech_1.html）から新しい URL へ転送する（redirect_from を書いたページだけ）
+  - jekyll-redirect-from
+
+# Markdown の改行をそのまま改行（<br>）にする（空行で段落を分ける）
+kramdown:
+  hard_wrap: true
+
+# news/ ・ collection/ ・ research/ の .md に，それぞれのレイアウトを自動で当てる
+defaults:
+  - scope:
+      path: "news"
+    values:
+      layout: news
+  - scope:
+      path: "collection"
+    values:
+      layout: collection-item
+  - scope:
+      path: "research"
+    values:
+      layout: research-item
+
+exclude:
+  - tools
+  - news/README.md
+  - collection/README.md
+  - research/README.md

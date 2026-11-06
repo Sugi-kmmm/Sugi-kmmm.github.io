@@ -1,0 +1,7 @@
+---
+# news/*.md の全お知らせを1つの JSON にまとめる（GitHub Pages がビルド時に作る．トップページの「トピックス」に使う）．消さないでください．
+layout: null
+---
+{% assign keys = "タイトル,日付" | split: "," %}[{% assign sep = "" %}{% for p in site.pages %}{% assign head = p.path | slice: 0, 5 %}{% assign ext = p.name | split: "." | last %}{% if head == "news/" and ext == "md" %}{{ sep }}
+{"file": {{ p.path | jsonify }}, "url": {{ p.url | jsonify }}, "data": { {% for k in keys %}{{ k | jsonify }}: {{ p[k] | jsonify }}{% unless forloop.last %}, {% endunless %}{% endfor %} }}{% assign sep = "," %}{% endif %}{% endfor %}
+]

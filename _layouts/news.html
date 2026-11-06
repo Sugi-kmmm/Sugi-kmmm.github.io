@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<!-- お知らせ1件（news/*.md）のレイアウト -->
+<p class="post-date">{{ page["日付"] | date: "%Y.%m.%d" }}</p>
+<h2>{{ page["タイトル"] | escape }}</h2>
+<div class="article-body">
+{{ content }}
+</div>
+<script src="/js_includes/article.js"></script>
+<p><a href="/index.html" class="back-to-top-button">トップへ戻る</a></p>

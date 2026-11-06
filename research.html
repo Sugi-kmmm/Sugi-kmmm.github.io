@@ -1,6 +1,3 @@
----
-# ↑ この front matter は research/ 配下のページ一覧を GitHub Pages (Jekyll) に作らせるために必要です．消さないでください．
----
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -40,23 +37,12 @@
             <h2>研究業績（共著含む）</h2>
 
             <!--
-                ■ 業績の追加方法
-                research/ に publication-table を含むページを置くだけで，この一覧に自動で表示されます．
-                （research/_template.html をコピーして作成してください．ファイル名が _ で始まるものは対象外）
-                表の各行から以下を読み取ります．
-                  タイトル          : 一覧の見出し（リンク）
-                  種別              : グループ分け（/js_includes/publications.js の CATEGORY_ORDER の順．「国内会議発表（口頭）」のように
-                                      先頭が一致すれば同じ順位として扱います．無い場合は「その他」）
-                  出版日 / 学位取得日 / 受賞日 : 年タブの振り分けと並び順（例: 2026年1月25日）
-                  著者，掲載誌，巻，号，ページ : 一覧の補足情報
+                ■ 業績の追加・修正方法
+                research/<年>/ に業績1件につき1つの .md ファイル（例 research/2024/2024robomech_1.md）を置いて push するだけです．
+                HTML を書く必要はありません．書き方は research/README.md，ひな形は research/_template/ を見てください．
             -->
-            <script type="application/json" id="publication-urls">
-                {% assign urls = "" | split: "" %}
-                {% for f in site.static_files %}{% assign head = f.path | slice: 0, 10 %}{% if head == "/research/" and f.extname == ".html" %}{% assign urls = urls | push: f.path %}{% endif %}{% endfor %}
-                {% for p in site.pages %}{% if p.dir == "/research/" %}{% assign urls = urls | push: p.url %}{% endif %}{% endfor %}
-                {{ urls | jsonify }}
-            </script>
-
+            <input type="search" id="publication-search" class="pub-search"
+                placeholder="タイトル・著者・掲載誌で検索（スペース区切りで AND 検索）" aria-label="研究業績を検索" hidden>
             <p id="publication-status" class="pub-empty">読み込み中…</p>
             <div id="publication-tabs" class="publication-tabs" hidden>
                 <div class="pub-tablist" role="tablist" aria-label="年別の研究業績"></div>
@@ -65,6 +51,7 @@
         </div>
     </main>
 
+    <script src="/js_includes/research-data.js"></script>
     <script src="/js_includes/publications.js"></script>
 
     <div id="footer-include"></div>
