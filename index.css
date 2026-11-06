@@ -314,6 +314,52 @@ a:hover {
     margin-right: auto;
 }
 
+/* 動画（mp4 など）・YouTube の埋め込み（js_includes/article.js が作る） */
+video.captioned-image {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 720px;
+}
+
+.video-embed {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+}
+
+.video-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 8px;
+}
+
+/* 研究業績の検索欄 */
+.pub-search {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 10px 0 0;
+    padding: 10px 14px;
+    background: #2d2d2d;
+    color: #e0e0e0;
+    border: 1px solid #555;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1em;
+}
+
+.pub-search:focus {
+    outline: none;
+    border-color: #ae3d4b;
+}
+
+.pub-search[hidden] {
+    display: none;
+}
+
 /* 研究業績（タブ形式） */
 .publication-tabs {
     margin-top: 20px;
@@ -321,9 +367,48 @@ a:hover {
 
 .pub-tablist {
     display: flex;
-    flex-wrap: wrap;
+    align-items: flex-end;
     gap: 4px;
     border-bottom: 3px solid #ae3d4b;
+}
+
+/* 全件表示タブ（左端に固定） */
+.pub-tablist > button {
+    flex: none;
+}
+
+/* 年タブ（多いときは横スクロール） */
+.pub-year-tabs {
+    display: flex;
+    gap: 4px;
+    flex: 1;
+    min-width: 0;
+    overflow-x: auto;
+    /* スクロールバーは隠し，続きがある側を薄くぼかして示す（js_includes/publications.js が more-left / more-right を付ける） */
+    scrollbar-width: none;
+}
+
+.pub-year-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.pub-year-tabs.more-right {
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent);
+}
+
+.pub-year-tabs.more-left {
+    -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 40px), transparent);
+    mask-image: linear-gradient(to left, #000 calc(100% - 40px), transparent);
+}
+
+.pub-year-tabs.more-left.more-right {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 40px, #000 calc(100% - 40px), transparent);
+    mask-image: linear-gradient(to right, transparent, #000 40px, #000 calc(100% - 40px), transparent);
+}
+
+.pub-year-tabs button {
+    flex: none;
 }
 
 .pub-tablist button {
@@ -441,4 +526,8 @@ a:hover {
     .sp {
         display: none;
     }
+}
+/* 研究業績の個別ページ：抄録欄の段落 */
+.publication-table td.abstract p {
+    margin: 0 0 0.5em;
 }
